@@ -1,17 +1,24 @@
 .main-container
   .row.header-account
+    .col-6
+      p 微助
+    .col-10
+      input.header-input(placeholder='搜索你想捐助的物品')
+    .col-3
+      a.header-search(href="javascript:") 搜索
     .col-5
-      p logo
-    .col-5.offset-14
-      .has-login
-        a(href="javascript:") 我的信息 |
-        a.header-exit(href="javascript:") 退出
+      //  .has-login 
+      //    a(href="javascript:") 我的信息 |
+      //    a.header-exit(href="javascript:") 退出
+      .no-login
+        a(href="javascript:") 登录 |
+        a(href="javascript:") 注册
 
 .header-nav
   .main-container
     .row
       .col-4.offset-4
-       a(href="javascript:") 首页
+       a.active(href="javascript:") 首页
       .col-4
         a(href="javascript:") 申请帮助
       .col-4

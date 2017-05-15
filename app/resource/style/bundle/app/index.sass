@@ -1,0 +1,53 @@
+@import "../../app"
+
+.index-banner
+  +margin(30,n,n)
+  +size(100%,197)
+  background: #fdfdfa
+  background-image: url(../image/banner.png)
+  background-repeat: no-repeat
+  border: 1px solid $main-color
+
+  .row
+    +margin(40,n)
+    p
+      font-size: 16px
+  .account
+    +margin(20,n)
+    span
+      +padding(10,35)
+      +margin(n,20,n,n)
+      display: inline-block
+      min-width: 100px
+      border: 1px solid $main-color
+      border-radius: 3px
+      text-align: center
+      color: $main-color
+      font-weight: bold
+      font-size: 20px
+      background: linear-gradient(to bottom, #fff, #dcdbdb)
+  
+
+.need-help-item
+  +padding(30,n)
+  border-bottom: 1px solid #ccc
+  .summary
+    line-height: 24px
+  img
+    +size(300,180)
+  .type
+    color: #246bb2
+    +margin(20,n)
+  .help
+    display: block
+    color: #fff
+    background: $main-color
+    text-align: center
+    +padding(10,10)
+    border-radius: 8px
+    &:hover
+      background: lighten($main-color,5%)
+
+
+
+  

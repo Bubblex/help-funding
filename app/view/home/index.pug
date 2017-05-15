@@ -1,0 +1,69 @@
+extends ../_master
+
+block append content
+
+  // BEGIN banner 
+  .main-container
+    .index-banner 
+      .row
+        .col-8.offset-8
+          p 历史捐助物品数
+          .account
+            span.account-thing  11111 
+            | 件
+        .col-6
+          p 历史捐助人数
+          .account
+           span.account-people  11111 
+           | 人
+  // END banner
+
+  // BEGIN 帮助列表
+  .main-container
+    .need-help-list
+      .need-help-item
+        .row
+          .col-8
+            img(src='/resource/image/banner.png')
+          .col-16
+            p.summary 一个帮助，让贫困女童继续求学梦想。女童是弱势群体中的弱势；今天的女童，将成为明天的母亲，帮助一名贫困女童，不仅是帮助一个人，而是帮助至少一代人。从传统的项目执行到前沿的公益创投、影响力投资，王兵的布阵越来越大，下一步，他要为行业再造新生。
+              a(href='javascript:') 详情
+            p.type 书包
+            .row
+              .col-4
+                p 0人帮助
+              .col-4.offset-16
+                a.help(href='javascript:') 帮助
+
+      .need-help-item
+        .row
+          .col-8
+            img(src='/resource/image/banner.png')
+          .col-16
+            p.summary 一个帮助，让贫困女童继续求学梦想。女童是弱势群体中的弱势；今天的女童，将成为明天的母亲，帮助一名贫困女童，不仅是帮助一个人，而是帮助至少一代人。从传统的项目执行到前沿的公益创投、影响力投资，王兵的布阵越来越大，下一步，他要为行业再造新生。
+              a(href='javascript:') 详情
+            p.type 书包
+            .row
+              .col-4
+                p 0人帮助
+              .col-4.offset-16
+                a.help(href='javascript:') 帮助
+
+    //  分页
+    .pageContent
+        .page
+            input#totalCount(type='hidden'
+            value='2')
+            input#page(type='hidden'
+            value='2')
+            input#pageCount(type='hidden'
+            value='4')
+            ul#webPagination
+  // END 帮助列表
+            
+block append vendor
+    script(src='/resource/vendor/pagination/jquery.pagination.js')
+
+block append script
+  script(src='/resource/script/index.babel.js')
+        

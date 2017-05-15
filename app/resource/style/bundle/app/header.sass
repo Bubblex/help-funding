@@ -1,9 +1,32 @@
 @import "../../app"
 
-.header-account
-  +padding(20)
 
-  .has-login
+.header-input
+  +size(100%,40)
+  +padding(n,14)
+  border: 1px solid #ccc
+  border-top-left-radius: 8px
+  border-bottom-left-radius: 8px
+
+.header-search
+  +size(100%,40)
+  color: #fff
+  display: block
+  text-align: center
+  background: $main-color
+  line-height: 40px
+  border-top-right-radius: 8px
+  border-bottom-right-radius: 8px
+  &:hover
+    background: lighten($main-color,5%)
+
+
+.header-account
+  +padding(20,n)
+
+  .has-login,
+  .no-login
+    line-height: 40px
     float: right
 
   .header-exit
@@ -18,5 +41,6 @@
     padding: 20px
     display: block
     text-align: center
-    &:hover
+    &:hover,
+    &.active
       background: lighten($main-color,5%)
