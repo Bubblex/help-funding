@@ -1,0 +1,22 @@
+@import "../../app"
+
+.header-account
+  +padding(20)
+
+  .has-login
+    float: right
+
+  .header-exit
+    color: $text-color
+    &:hover
+      color: $main-color
+
+.header-nav
+  background: $main-color
+  a
+    color: #fff
+    padding: 20px
+    display: block
+    text-align: center
+    &:hover
+      background: lighten($main-color,5%)
