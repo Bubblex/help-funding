@@ -3,7 +3,7 @@
     @each $media in $list {
         @media (min-width: px($media)) {
             html {
-                font-size: px($media / $design-size * 100);
+                font-size: px($media / $dev-size * 100);
             }
         }
     }

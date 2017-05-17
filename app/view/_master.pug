@@ -11,6 +11,8 @@
 //- 是否格式化手机号码
 - var formatTelephone = true
 
+- var hasHeader = true
+
 block variables
 
 doctype html
@@ -29,7 +31,8 @@ html(lang=lang, class=htmlClass)
     body(class=bodyClass)
         block before
         block header
-            include _header
+            if hasHeader
+                include _header
         block content
         block footer
         block after

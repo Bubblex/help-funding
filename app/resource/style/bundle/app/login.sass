@@ -1,0 +1,44 @@
+@import "../../app"
+
+
+.login-container,
+html,
+body
+  +size(100%,100%)
+
+.login-container
+  padding: 50px 100px
+  background: #cce2bd
+  .login-img
+    display: block
+    margin: 0 auto
+    height: 500px
+    width: auto
+
+  .login-content
+    +margin(100,n,n,50)
+    background: #fff
+    width: 450px
+    padding: 30px
+    p
+      margin-bottom: 40px
+    input
+      +size(100%,40)
+      +padding(0,14)
+      margin-bottom: 20px
+      border: 1px solid #ccc
+      &.user
+        &:before
+          content: ''
+          display: block
+          +size(40)
+          background-image: url(../image/login-user.png)
+    a
+      display: block
+      color: #fff
+      background: $main-color
+      +size(100%,45)
+      margin-top: 20px
+      text-align: center
+      line-height: 45px
+    

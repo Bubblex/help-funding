@@ -1,0 +1,18 @@
+extends ../_master
+
+block variables
+  -
+    hasHeader = false
+
+block append content
+  .login-container
+    .row
+      .col-12
+        img.login-img(src='/resource/image/loginimg.png')
+      .col-12
+        .login-content
+          p 登录
+          input.user(placeholder='手机号')
+          input.pwd(placeholder='密码')
+          a(href='javascript:') 登录
+
