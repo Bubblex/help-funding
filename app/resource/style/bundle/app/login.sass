@@ -24,15 +24,24 @@ body
       margin-bottom: 40px
     input
       +size(100%,40)
-      +padding(0,14)
+      +padding(0,55)
       margin-bottom: 20px
       border: 1px solid #ccc
-      &.user
-        &:before
-          content: ''
-          display: block
-          +size(40)
-          background-image: url(../image/login-user.png)
+     
+    .user
+        display: block
+        background-image: url(../image/login-user.png)
+        background-repeat: no-repeat
+        background-size: auto 40px
+
+    .pwd
+      display: block
+      background-image: url(../image/login-pwd.png)
+      background-repeat: no-repeat
+      background-size: auto 40px
+        
+
+      
     a
       display: block
       color: #fff

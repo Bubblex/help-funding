@@ -12,7 +12,9 @@ block append content
       .col-12
         .login-content
           p 登录
-          input.user(placeholder='手机号')
-          input.pwd(placeholder='密码')
-          a(href='javascript:') 登录
+          input.user(placeholder='手机号' name='username')
+          input.pwd(placeholder='密码' name='userpwd')
+          a#login(href='javascript:') 登录
 
+block append script
+  script(src='/resource/script/login.babel.js')
