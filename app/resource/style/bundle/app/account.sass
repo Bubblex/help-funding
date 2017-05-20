@@ -1,0 +1,98 @@
+@import "../../app"
+
+
+.login-container,
+html,
+body
+  +size(100%,100%)
+
+.login-container
+  padding: 50px 100px
+  background: #cce2bd
+  .login-img
+    display: block
+    margin: 0 auto
+    height: 500px
+    width: auto
+
+
+  .account-content
+    background: #fff
+    width: 450px
+    padding: 30px
+    overflow: hidden
+    
+    input
+      border: 1px solid #ccc
+
+    .account-btn
+      display: block
+      color: #fff
+      background: $main-color
+      +size(100%,45)
+      margin-top: 20px
+      text-align: center
+      line-height: 45px
+
+    .account-samll-btn
+      float: right
+      margin-top: 10px
+
+  .login-content
+    +margin(100,n,n,50)
+    p
+      margin-bottom: 40px
+
+    input
+      +size(100%,40)
+      +padding(0,55)
+      margin-bottom: 20px
+
+    .user
+        display: block
+        background-image: url(../image/login-user.png)
+        background-repeat: no-repeat
+        background-size: auto 40px
+
+    .pwd
+      display: block
+      background-image: url(../image/login-pwd.png)
+      background-repeat: no-repeat
+      background-size: auto 40px
+
+  .register-content
+    p
+      margin-bottom: 20px
+    .account-spilt
+      color: $main-color
+      margin-bottom: 20px
+      border-bottom: 1px solid $main-color
+    
+    
+
+
+
+    .account-row
+      margin-bottom: 10px
+      p
+        margin: 0 10px
+        line-height: 30px
+        text-align: right
+        span 
+          color: red
+
+      input
+        +size(100%,30)
+        +padding(n,n,n,12)
+
+      .get-code
+        display: block
+        color: #fff
+        background: $main-color
+        +size(100%,30)
+        text-align: center
+        line-height: 30px
+        &.disabled
+          background: #ccc
+    
+    

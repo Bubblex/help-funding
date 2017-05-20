@@ -10,11 +10,12 @@ block append content
       .col-12
         img.login-img(src='/resource/image/loginimg.png')
       .col-12
-        .login-content
+        .login-content.account-content
           p 登录
           input.user(placeholder='手机号' name='username')
           input.pwd(placeholder='密码' name='userpwd')
-          a#login(href='javascript:') 登录
+          a#login.account-btn(href='javascript:') 登录
+          a.account-samll-btn(href='/home/register') 注册
 
 block append script
   script(src='/resource/script/login.babel.js')

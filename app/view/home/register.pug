@@ -1,0 +1,73 @@
+extends ../_master
+
+block variables
+  -
+    hasHeader = false
+
+block append content
+  .login-container
+    .row
+      .col-12
+        img.login-img(src='/resource/image/loginimg.png')
+      .col-12
+        .register-content.account-content
+          p 注册
+          .account-spilt 账户信息
+          .row.account-row
+            .col-5
+              p 
+                span *
+                | 手机号
+            .col-19
+              input.user(placeholder='请输入手机号' name='username')
+          .row.account-row
+            .col-5 
+              p 
+                span *
+                | 密码
+            .col-19 
+              input.pwd(placeholder='请输入密码' name='userpwd')
+          .row.account-row
+            .col-5 
+              p 
+                span *
+                | 确认密码
+            .col-19 
+              input.pwd(placeholder='请确认密码' name='confirm-userpwd')
+          .row.account-row
+            .col-5 
+              p 
+                span *
+                | 验证码
+            .col-10
+              input.pwd(placeholder='请输入验证码' name='code')
+            .col-9
+              a.get-code(href='javascript:') 获取验证码
+
+          .account-spilt 个人信息（便于捐助时，工作人员取件）
+          .row.account-row
+            .col-5 
+              p 
+                span *
+                | 学校
+            .col-19 
+              input.pwd(placeholder='请输入学校' name='school')
+          .row.account-row
+            .col-5 
+              p 
+                span *
+                | 宿舍楼
+            .col-19 
+              input.pwd(placeholder='请输入宿舍楼' name='room')
+          .row.account-row
+            .col-5 
+              p 
+                span *
+                | 详细地址
+            .col-19 
+              input.pwd(placeholder='请输入详细地址(最少5个字)' name='detailaddr')
+          a#register.account-btn(href='javascript:') 注册
+          a.account-samll-btn(href='/home/login') 登录
+
+block append script
+  script(src='/resource/script/register.babel.js')
