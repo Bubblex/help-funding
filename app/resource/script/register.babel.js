@@ -1,4 +1,27 @@
 (function($){
+
+  $('.get-code').on('click',function() {
+    $(this).addClass('disabled')
+
+    var countdown = 60
+
+    const timer = setInterval(function() { 
+      if (countdown === 0) { 
+        $('.get-code').text('获取验证码')
+        $('.get-code').removeClass('disabled')
+        countdown = 60 
+        clearInterval(timer)
+        return
+        
+      } else { 
+        $('.get-code').text(countdown + 's后重新发送'); 
+        countdown--
+      } 
+    }
+    ,1000) 
+
+  })
+
   $('#register').on('click',function() {
 
     const username = $("input[name='username']").val()
@@ -27,6 +50,10 @@
     }
     else if (confirm_userpwd != userpwd) {
       alert('两次密码不一致')
+      return
+    }
+    else if (!$('.get-code').hasClass('disabled')) {
+      alert('请获取验证码')
       return
     }
     else if (code === '') {
