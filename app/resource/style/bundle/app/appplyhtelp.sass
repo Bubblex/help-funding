@@ -1,0 +1,58 @@
+@import "../../app"
+
+.apply-row
+  margin-bottom: 20px
+  p
+    text-align: right
+    margin-right: 16px
+    line-height: 30px
+    span
+      color: red
+  input[type='text'],
+  select,
+    +size(100%,30)
+    +padding(0,13)
+    border: 1px solid #ccc
+    border-radius: 5px
+  textarea
+    +size(100%,auto)
+    +padding(10)
+    border: 1px solid #ccc
+    border-radius: 5px
+
+input[type='radio']
+
+.apply-sex
+  +size(25)
+  color: #fff
+  line-height: 25px
+  text-align: center
+  cursor: pointer
+  transition: all 0.3s
+  &:hover,
+  &:checked
+    +size(30)
+    line-height: 30px
+    box-shadow: 3px 3px 10px #111
+  &.apply-femail
+    background: #227dd1
+    &:before
+      content: '男'
+  &.apply-mail
+    background: #ff6f6f
+    &:before
+      content: '女'
+
+
+.apply-btn
+  display: block
+  color: #fff
+  background: $main-color
+  +size(300,40)
+  text-align: center
+  line-height: 40px
+  margin: 20px auto
+  border-radius: 8px
+  transition: all 0.3s linear
+  &:hover
+    background: darken($main-color,5%)

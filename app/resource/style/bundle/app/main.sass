@@ -7,6 +7,31 @@
 a
   color: $link-color
 
+.public-spilt
+    +padding(20,n,17)
+    font-size: 16px
+    color: $main-color
+    margin-bottom: 20px
+    border-bottom: 1px solid $main-color
+
+.public-title 
+    font-size: 16px
+    color: $main-color
+    +margin(0,n,20)
+
+.left-apply-btn
+    display: block
+    width: 180px
+    +padding(10,30)
+    background: #bcd9a7
+    color: #333
+    text-align: center
+    transition: all 0.3s linear
+    &:hover,
+    &.active
+        background: $main-color
+        color: #fff
+
 
 .pageContent
     +size(auto,50)

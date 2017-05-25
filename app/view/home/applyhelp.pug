@@ -1,0 +1,98 @@
+//- 申请帮助页
+extends ../_master
+
+block variables
+  -
+    hasHeader = true
+
+block append content
+  .main-container
+    .public-spilt 申请帮助
+    .row
+      .col-6
+        a.left-apply-btn.active(href='javascript:') 填写申请
+        a.left-apply-btn(href='javascript:') 历史申请
+      .col-12
+        p.public-title 受助人信息
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 真实姓名
+          .col-20
+            input(placeholder='请输入真实姓名' name='username' type='text')
+        .row.apply-row
+          .col-4
+            p
+              span *
+              | 性别
+          .col-3
+              input.apply-sex.apply-femail(type='radio' checked name='sex' value='1')
+          .col-17
+              input.apply-sex.apply-mail(type='radio' name='sex' value='2')
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 身份证号
+          .col-20
+            input(placeholder='请输入身份证号' name='username' type='text')
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 电话
+          .col-20
+            input(placeholder='请输入电话' name='username' type='text')
+        p.public-title 需要物品
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 物品
+          .col-6
+            select
+              option 学习用品
+          .col-6.offset-1
+            select
+              option 学习用品
+          .col-6.offset-1
+            input(placeholder='填写其他' name='username' type='text')
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 个数
+        p.public-title 情况简介
+          .row.apply-row
+            textarea(placeholder='可填写家庭情况‘自己的梦想’为什么需要这个物品，不少于100字' name='username' rows='3')
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 上传照片
+        p.public-title 收件地址
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 省市
+          .col-20
+            input(placeholder='请输入省市' name='username' type='text')
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 街道
+          .col-20
+            input(placeholder='请输入街道' name='username' type='text')
+        .row.apply-row
+          .col-4
+              p
+                span *
+                | 详细地址
+          .col-20
+            textarea(placeholder='请填写详细地址，不少于5个字' name='username' rows='2')
+        a.apply-btn(href='javascript:') 登录
+block append script
+  script(src='/resource/script/applyhelp.babel.js')
