@@ -51,11 +51,12 @@ block append content
                 span *
                 | 物品
           .col-6
-            select
+            select(name='thingtype')
               option 学习用品
           .col-6.offset-1
-            select
+            select(name='thing')
               option 学习用品
+              option 其他
           .col-6.offset-1
             input(placeholder='填写其他' name='other' type='text')
         .row.apply-row
@@ -63,6 +64,12 @@ block append content
               p
                 span *
                 | 个数
+          .col-2
+              a.apply-control-num.js-plus-num -
+          .col-3
+              input.js-num(name='number' type='text' value='1' disabled)
+          .col-2
+              a.apply-control-num.js-less-num +
         p.public-title 情况简介
           .row.apply-row
             textarea(placeholder='可填写家庭情况‘自己的梦想’为什么需要这个物品，不少于100字' name='summary' rows='3')
@@ -71,6 +78,8 @@ block append content
               p
                 span *
                 | 上传照片
+          .col-5
+              input(type='file' name='photo')
         p.public-title 收件地址
         .row.apply-row
           .col-4
