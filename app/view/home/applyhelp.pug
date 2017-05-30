@@ -36,14 +36,14 @@ block append content
                 span *
                 | 身份证号
           .col-20
-            input(placeholder='请输入身份证号' name='username' type='text')
+            input(placeholder='请输入身份证号' name='idnumber' type='text')
         .row.apply-row
           .col-4
               p
                 span *
                 | 电话
           .col-20
-            input(placeholder='请输入电话' name='username' type='text')
+            input(placeholder='请输入电话' name='phone' type='text')
         p.public-title 需要物品
         .row.apply-row
           .col-4
@@ -57,7 +57,7 @@ block append content
             select
               option 学习用品
           .col-6.offset-1
-            input(placeholder='填写其他' name='username' type='text')
+            input(placeholder='填写其他' name='other' type='text')
         .row.apply-row
           .col-4
               p
@@ -65,7 +65,7 @@ block append content
                 | 个数
         p.public-title 情况简介
           .row.apply-row
-            textarea(placeholder='可填写家庭情况‘自己的梦想’为什么需要这个物品，不少于100字' name='username' rows='3')
+            textarea(placeholder='可填写家庭情况‘自己的梦想’为什么需要这个物品，不少于100字' name='summary' rows='3')
         .row.apply-row
           .col-4
               p
@@ -78,21 +78,21 @@ block append content
                 span *
                 | 省市
           .col-20
-            input(placeholder='请输入省市' name='username' type='text')
+            input(placeholder='请输入省市' name='city' type='text')
         .row.apply-row
           .col-4
               p
                 span *
                 | 街道
           .col-20
-            input(placeholder='请输入街道' name='username' type='text')
+            input(placeholder='请输入街道' name='route' type='text')
         .row.apply-row
           .col-4
               p
                 span *
                 | 详细地址
           .col-20
-            textarea(placeholder='请填写详细地址，不少于5个字' name='username' rows='2')
-        a.apply-btn(href='javascript:') 登录
+            textarea(placeholder='请填写详细地址，不少于5个字' name='detailadr' rows='2')
+        a.apply-btn(href='javascript:') 确认申请
 block append script
   script(src='/resource/script/applyhelp.babel.js')
