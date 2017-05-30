@@ -17,6 +17,43 @@ block append content
       .col-3
         p 0人帮助
       .col-3.offset-18
-        a(href='javascript:') 帮助
+        a#confirm-info(href='javascript:') 帮助
   // END 受助申请详情
+
+  // BEGIN 确认捐助弹框
+  .layer-container
+    .layer-confirm-help
+      h2 确认信息
+      .row.confirm-row
+        .col-7
+          p.title 捐助的物品：
+        .col-17
+          p 222
+      .row.confirm-row
+        .col-7
+          p.title  您的姓名：
+        .col-17
+          p  aa
+      .row.confirm-row
+        .col-7
+          p.title  您的联系方式：
+        .col-17
+          p 15156465
+      .row.confirm-row
+        .col-7
+          p.title  您的地址：
+        .col-17
+          p 河北省石家庄市藁城市222
+      p.confirm-thanks 感谢您的爱心，工作人员讲在2个工作日内去上述地址取件，请耐心等候~
+      .row
+        .col-12
+          a#confirm-help(href='javascript:') 确认帮助
+        .col-12
+          a#cancle-help(href='javascript:') 取消
+        
+    
+  // END 确认捐助弹框
   
+
+block append script
+  script(src='/resource/script/applydetail.babel.js')

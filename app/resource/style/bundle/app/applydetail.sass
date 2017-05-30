@@ -23,4 +23,49 @@
     cursor: pointer
     &:hover
       background: darken($main-color,5%)
-    
+
+.layer-container
+  background: rgba(0,0,0,.7)
+  +size(100%,100%)
+  position: fixed
+  display: none
+  top: 0
+  left: 0
+  .layer-confirm-help
+    $height: 400px
+    $weight: 500px
+    background: #fff
+    +size($weight,$height)
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-top: -$height/2
+    margin-left: -$weight/2
+    padding: 20px
+    border-radius: 5px
+    h2
+      text-align: center
+      margin-bottom: 30px
+    .title 
+      text-align: right
+      margin-right: 10px
+    .confirm-row
+      border-bottom: 1px solid #ccc
+      margin-bottom: 20px
+      padding-bottom: 10px
+    .confirm-thanks
+      color: $main-color
+      margin-bottom: 30px
+    a
+      display: block
+      color: #fff
+      background: $main-color
+      +size(100,30)
+      text-align: center
+      line-height: 30px
+      border-radius: 8px
+      transition: all 0.3s linear
+      cursor: pointer
+      margin: 0 auto
+      &:hover
+        background: darken($main-color,5%)
