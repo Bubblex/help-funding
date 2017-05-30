@@ -8,8 +8,8 @@
       a.header-search(href="javascript:") 搜索
     .col-5
       //  .has-login 
-      //    a(href="javascript:") 我的信息 |
-      //    a.header-exit(href="javascript:") 退出
+      //    a(href="/home/myinfo") 我的信息 |
+      //    a.header-exit(href="/home/login") 退出
       .no-login
         a(href="/home/login") 登录 |
         a(href="/home/register") 注册
@@ -18,11 +18,11 @@
   .main-container
     .row
       .col-4.offset-4
-       a.active(href="javascript:") 首页
+       a.active(href="/home/index") 首页
       .col-4
-        a(href="javascript:") 申请帮助
+        a(href="/home/applyhelp") 申请帮助
       .col-4
-        a(href="javascript:") 捐助查询
+        a(href="/home/helphistory") 捐助查询
       .col-4
         a(href="javascript:") 关于我们
 

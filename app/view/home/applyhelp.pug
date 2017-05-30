@@ -9,10 +9,15 @@ block append content
   .main-container
     .public-spilt 申请帮助
     .row
+      // BEGIN 左侧菜单
       .col-6
         a.left-apply-btn.active(href='javascript:') 填写申请
         a.left-apply-btn(href='javascript:') 历史申请
+      // END 左侧菜单
+        
+
       .col-12
+        // BEGIN 受助人信息
         p.public-title 受助人信息
         .row.apply-row
           .col-4
@@ -44,6 +49,10 @@ block append content
                 | 电话
           .col-20
             input(placeholder='请输入电话' name='phone' type='text')
+        // END 受助人信息
+
+
+        // BEGIN 需要物品
         p.public-title 需要物品
         .row.apply-row
           .col-4
@@ -70,6 +79,10 @@ block append content
               input.js-num(name='number' type='text' value='1' disabled)
           .col-2
               a.apply-control-num.js-less-num +
+        // END 需要物品
+
+
+        // BEGIN 情况简介
         p.public-title 情况简介
           .row.apply-row
             textarea(placeholder='可填写家庭情况‘自己的梦想’为什么需要这个物品，不少于100字' name='summary' rows='3')
@@ -80,6 +93,9 @@ block append content
                 | 上传照片
           .col-5
               input(type='file' name='photo')
+        // END 情况简介
+
+        // BEGIN 收件地址
         p.public-title 收件地址
         .row.apply-row
           .col-4
@@ -102,6 +118,8 @@ block append content
                 | 详细地址
           .col-20
             textarea(placeholder='请填写详细地址，不少于5个字' name='detailadr' rows='2')
+        // END 收件地址
+        
         a.apply-btn(href='javascript:') 确认申请
 block append script
   script(src='/resource/script/applyhelp.babel.js')

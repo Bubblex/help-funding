@@ -1,0 +1,26 @@
+@import "../../app"
+
+.apply-detail
+  padding-top: 20px
+  img
+    width: 92%
+
+  p
+    line-height: 28px
+    text-align: justify
+  .type
+    color: #227dd1
+    margin: 10px 5px
+  a
+    display: block
+    color: #fff
+    background: $main-color
+    +size(100,30)
+    text-align: center
+    line-height: 30px
+    border-radius: 8px
+    transition: all 0.3s linear
+    cursor: pointer
+    &:hover
+      background: darken($main-color,5%)
+    
