@@ -1,1 +1,52 @@
 //- 我的信息
+extends ../_master
+
+block variables
+  -
+    hasHeader = true
+
+block append content
+  .main-container
+    .public-spilt 我的信息
+    .myinfo-container
+      .account-spilt 个人信息
+      .row.account-row
+        .col-5
+          p 手机号
+        .col-19
+          input.user(placeholder='请输入手机号' name='username')
+          p.show 15552
+      .row.account-row
+        .col-5 
+          p 姓名
+        .col-19 
+          input.pwd(placeholder='请输入姓名' name='userpwd')
+          p.show 齐坤丽
+
+      .account-spilt 取件地址（便于捐助时，工作人员取件）
+      .row.account-row
+        .col-5 
+          p 学校
+        .col-19 
+          input.pwd(placeholder='请输入学校' name='school')
+          p.show 华北理工大学
+          
+      .row.account-row
+        .col-5 
+          p 宿舍楼
+        .col-19 
+          input.pwd(placeholder='请输入宿舍楼' name='room')
+          p.show A座
+          
+      .row.account-row
+        .col-5
+          p 详细地址
+        .col-19
+          input.pwd(placeholder='请输入详细地址(最少5个字)' name='detailaddr')
+          p.show 228
+          
+      a#change-myinfo.account-btn(href='javascript:') 修改
+      a#confirm-change.account-btn(href='javascript:') 确认
+
+block append script
+  script(src='/resource/script/myinfo.babel.js')

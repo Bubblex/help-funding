@@ -1,0 +1,38 @@
+@import "../../app"
+
+.myinfo-container
+  width: 500px
+  margin: 0 auto
+  
+  .account-spilt
+    color: $main-color
+    margin-bottom: 20px
+  
+  .account-row
+    p
+      margin: 0 15px
+      line-height: 30px
+      text-align: right
+      span 
+        color: red
+    .show
+      text-align: left
+      margin-bottom: 20px
+      line-height: 30px
+
+    input
+      +size(100%,30)
+      +padding(n,n,n,12)
+      margin-bottom: 20px
+      border: 1px solid #ccc
+
+  .account-btn
+      display: block
+      color: #fff
+      background: $main-color
+      +size(200,40)
+      margin-top: 20px
+      text-align: center
+      line-height: 40px
+      margin: 0 auto
+      border-radius: 5px
