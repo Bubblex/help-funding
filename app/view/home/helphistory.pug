@@ -1,1 +1,43 @@
 //- 帮助列表
+extends ../_master
+
+block variables
+  -
+    hasHeader = true
+
+block append content
+  .main-container
+    .public-spilt 捐物查询
+    .table
+      .th
+        .td 介绍
+        .td 物品
+        .td 状态
+        .td 物流信息
+      - for(var i = 0 ;i < 5 ;i++)
+        .tr
+          .td.helpdetail-container
+            img(src='/resource/image/banner.png')
+            p.detail 啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦
+            a(href='javascript:') 查看详情
+          .td 书包
+          .td 待取货
+          .td.logistics
+            p 暂无
+    //  分页
+    .pageContent
+      .page
+        input#totalCount(type='hidden'
+        value='2')
+        input#page(type='hidden'
+        value='2')
+        input#pageCount(type='hidden'
+        value='4')
+        ul#webPagination
+
+            
+block append vendor
+    script(src='/resource/vendor/pagination/jquery.pagination.js')
+
+block append script
+  script(src='/resource/script/helphistory.babel.js')
