@@ -1,1 +1,54 @@
 //- 申请列表
+extends ../_master
+
+block variables
+  -
+    hasHeader = true
+
+block append content
+  .main-container
+    .public-spilt 历史申请
+    .row
+      // BEGIN 左侧菜单
+      .col-6
+        a.left-apply-btn(href='/home/applyhelp') 填写申请
+        a.left-apply-btn.active(href='javascript:') 历史申请
+      // END 左侧菜单
+
+      .col-18
+        .table
+          .th
+            .td 介绍
+            .td 物品
+            .td 状态
+            .td 资助人
+            .td 操作
+          - for(var i = 0 ;i < 5 ;i++)
+            .tr
+              .td.detail-container
+                img(src='/resource/image/banner.png')
+                p.detail 啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦
+                a(href='javascript:') 查看详情
+              .td 书包
+              .td 待审核
+              .td 齐坤丽
+              .td 
+                a.right-btn.active(href='javascript:') 修改
+                a.right-btn(href='javascript:') 删除
+    //  分页
+    .pageContent
+      .page
+        input#totalCount(type='hidden'
+        value='2')
+        input#page(type='hidden'
+        value='2')
+        input#pageCount(type='hidden'
+        value='4')
+        ul#webPagination
+
+            
+block append vendor
+    script(src='/resource/vendor/pagination/jquery.pagination.js')
+
+block append script
+  script(src='/resource/script/applyhistory.babel.js')

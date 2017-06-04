@@ -1,0 +1,48 @@
+@import "../../app"
+
+.table
+  display: table
+  width: 100%
+
+.th,
+.tr
+  display: table-row
+
+.th
+  background: #f0f0f0
+
+  
+.td
+  +padding(10)
+  border-bottom: 1px solid #f0f0f0
+  border-left: 1px solid #f0f0f0
+  display: table-cell
+  vertical-align: middle
+  &:last-child
+    border-right: 1px solid #f0f0f0
+  &.detail-container
+    max-width: 386px
+    a
+      float: right
+  img
+    width: 80px
+    float: left
+    margin-right: 10px
+  .detail
+    overflow: hidden
+    max-height: 60px
+  .right-btn
+    +size(100,30)
+    background: #ccc
+    display: block
+    border-radius: 8px
+    margin-bottom: 10px
+    text-align: center
+    line-height: 30px
+    color: #323232
+    margin-right: auto
+    margin-left: auto
+    &.active
+      background: $main-color
+      color: #fff
+  

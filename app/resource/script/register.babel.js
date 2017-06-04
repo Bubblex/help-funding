@@ -25,6 +25,7 @@
   $('#register').on('click',function() {
 
     const username = $("input[name='username']").val()
+    const name = $("input[name='name']").val()
     const userpwd = $("input[name='userpwd']").val()
     const confirm_userpwd = $("input[name='confirm-userpwd']").val()
     const code = $("input[name='code']").val()
@@ -39,6 +40,10 @@
     else if(/^1[0-9]{10}$/.test(username) === false) {
       alert('手机号格式不正确')
 			return
+    }
+    else if (name === '') {
+      alert('请输入姓名')
+      return
     }
     else if (userpwd === '') {
       alert('请输入密码')
@@ -83,6 +88,7 @@
 
       data: {
         username: username,
+        name: name,
         userpwd: userpwd,
         confirm_userpwd: confirm_userpwd,
         code: code,
